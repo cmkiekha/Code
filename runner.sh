@@ -1,75 +1,75 @@
-echo "------------- Churn Dataset -------------" > output.txt
+echo "------------- Churn Dataset -------------" > outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Logistic Regression" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Logistic Regression" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model logistic_regression >> output.txt
+python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model logistic_regression >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Random Forest" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Random Forest" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model random_forest >> output.txt
+python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model random_forest >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "XGBoost" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "XGBoost" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model xgboost >> output.txt
+python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model xgboost >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "kNN Classifier" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "kNN Classifier" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model knn >> output.txt
+python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model knn >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Multi-Layer Perceptron" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Multi-Layer Perceptron" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model mlp >> output.txt
+python main.py --data churn --data_path ./data/WA_Fn-UseC_-Telco-Customer-Churn.csv --model mlp >> outputs/full_data.txt
 
-echo "---------- Engineering Dataset ----------" >> output.txt
+echo "---------- Engineering Dataset ----------" >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Linear Regression" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Linear Regression" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model linear_regression >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model linear_regression >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Random Forest" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Random Forest" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model random_forest >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model random_forest >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Elastic Net" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Elastic Net" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model elastic_net >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model elastic_net >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Ridge" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Ridge" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model ridge >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model ridge >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Lasso" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Lasso" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model lasso >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model lasso >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "XGBoost" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "XGBoost" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model xgboost >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model xgboost >> outputs/full_data.txt
 
-echo "" >> output.txt
-echo "Multi-Layer Perceptron" >> output.txt
-echo "" >> output.txt
+echo "" >> outputs/full_data.txt
+echo "Multi-Layer Perceptron" >> outputs/full_data.txt
+echo "" >> outputs/full_data.txt
 
-python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model mlp >> output.txt
+python main.py --data engineering --data_path http://apmonitor.com/pds/uploads/Main/manufacturing.txt --model mlp >> outputs/full_data.txt

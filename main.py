@@ -39,14 +39,18 @@ def main(args):
             visualizer_before_preprocessing.plot_missingness(os.path.join(args.eda_figures, f'missingness_{args.data}.JPG'))
 
     # 2. Feature Selection
-    if args.selection is None:
+    top_feats = ...
+    if args.selection is None or args.data == 'engineering':
         pass
     elif args.selection == 'rf':
-        # Selection with RF
-        pass
+        top_feats = ['MonthlyCharges', 'TotalCharges', 'Tenure']
+        data_loader.X_train, data_loader.X_test = data_loader.X_train[top_feats], data_loader.X_test[top_feats]
     elif args.selection == 'shap':
-        # Selection with Shap
-        pass
+        top_feats = ['Tenure', 'InternetService', 'TechSupport', 'OnlineSecurity', 'PaymentMethod']
+        data_loader.X_train, data_loader.X_test = data_loader.X_train[top_feats], data_loader.X_test[top_feats]
+    elif args.selection == 'borutashap':
+        top_feats = ['Contract', 'InternetService', 'MonthlyCharges', 'Tenure', 'TotalCharges', 'PaymentMethod']
+        data_loader.X_train, data_loader.X_test = data_loader.X_train[top_feats], data_loader.X_test[top_feats]
     else:
         raise ValueError("Error: Given feature selection method is invalid.")
 
@@ -54,12 +58,16 @@ def main(args):
     current_model = ...
     param_grid = ...
 
-    try:
-        if args.data == 'churn':
-            param_grid = get_churn_grid(args.model)
-        else:
-            param_grid = get_print_grid(args.model)
-    except:
+    if args.no_grid:
+        try:
+            if args.data == 'churn':
+                param_grid = get_churn_grid(args.model)
+            else:
+                param_grid = get_print_grid(args.model)
+        except:
+            print("Warning: No parameter grid found. Using default parameters.")
+            param_grid = {}
+    else:
         print("Warning: No parameter grid found. Using default parameters.")
         param_grid = {}
 
@@ -116,6 +124,8 @@ if __name__ == '__main__':
                         help='Feature selection approach. Default to None.')
     parser.add_argument('--eda', action='store_true', default=True,
                         help='Whether to perform exploratory data analysis')
+    parser.add_argument('--no_grid', type=bool, default=False,
+                        help='Whether to use the custom param grids from config or not.')
     parser.add_argument('--eda_figures', type=str, default='./figures',
                         help='Path to save the figures generated from EDA')
     parser.add_argument('--model', type=str, default='xgboost',

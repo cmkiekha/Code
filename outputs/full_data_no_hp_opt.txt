@@ -10,14 +10,15 @@ The number of training samples after rebalancing is 8260
 The number of testing samples after rebalancing is 1407
 --------------------------------------------------
 The churn data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
               precision    recall  f1-score   support
 
-           0       0.90      0.72      0.80      1033
-           1       0.50      0.78      0.61       374
+           0       0.88      0.75      0.81      1033
+           1       0.50      0.71      0.59       374
 
     accuracy                           0.74      1407
-   macro avg       0.70      0.75      0.71      1407
-weighted avg       0.79      0.74      0.75      1407
+   macro avg       0.69      0.73      0.70      1407
+weighted avg       0.78      0.74      0.75      1407
 
 
 Random Forest
@@ -30,14 +31,15 @@ The number of training samples after rebalancing is 8260
 The number of testing samples after rebalancing is 1407
 --------------------------------------------------
 The churn data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
               precision    recall  f1-score   support
 
-           0       0.86      0.84      0.85      1033
-           1       0.59      0.63      0.61       374
+           0       0.84      0.84      0.84      1033
+           1       0.55      0.55      0.55       374
 
-    accuracy                           0.78      1407
-   macro avg       0.72      0.73      0.73      1407
-weighted avg       0.79      0.78      0.79      1407
+    accuracy                           0.76      1407
+   macro avg       0.69      0.69      0.69      1407
+weighted avg       0.76      0.76      0.76      1407
 
 
 XGBoost
@@ -50,14 +52,15 @@ The number of training samples after rebalancing is 8260
 The number of testing samples after rebalancing is 1407
 --------------------------------------------------
 The churn data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
               precision    recall  f1-score   support
 
-           0       0.85      0.86      0.86      1033
-           1       0.61      0.58      0.59       374
+           0       0.85      0.83      0.84      1033
+           1       0.56      0.59      0.57       374
 
-    accuracy                           0.79      1407
-   macro avg       0.73      0.72      0.73      1407
-weighted avg       0.79      0.79      0.79      1407
+    accuracy                           0.77      1407
+   macro avg       0.70      0.71      0.71      1407
+weighted avg       0.77      0.77      0.77      1407
 
 
 kNN Classifier
@@ -70,14 +73,15 @@ The number of training samples after rebalancing is 8260
 The number of testing samples after rebalancing is 1407
 --------------------------------------------------
 The churn data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
               precision    recall  f1-score   support
 
-           0       0.86      0.72      0.79      1033
-           1       0.47      0.68      0.56       374
+           0       0.86      0.70      0.77      1033
+           1       0.45      0.68      0.54       374
 
-    accuracy                           0.71      1407
-   macro avg       0.67      0.70      0.67      1407
-weighted avg       0.76      0.71      0.73      1407
+    accuracy                           0.69      1407
+   macro avg       0.65      0.69      0.66      1407
+weighted avg       0.75      0.69      0.71      1407
 
 
 Multi-Layer Perceptron
@@ -90,14 +94,15 @@ The number of training samples after rebalancing is 8260
 The number of testing samples after rebalancing is 1407
 --------------------------------------------------
 The churn data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
               precision    recall  f1-score   support
 
-           0       0.87      0.81      0.84      1033
-           1       0.56      0.66      0.61       374
+           0       0.85      0.84      0.84      1033
+           1       0.57      0.59      0.58       374
 
     accuracy                           0.77      1407
-   macro avg       0.71      0.74      0.72      1407
-weighted avg       0.79      0.77      0.78      1407
+   macro avg       0.71      0.71      0.71      1407
+weighted avg       0.77      0.77      0.77      1407
 
 ---------- Engineering Dataset ----------
 
@@ -108,6 +113,7 @@ The number of training samples is 56
 The number of testing samples is 14
 --------------------------------------------------
 The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
 'MSE | RMSE | R2 | Explained Variance
 38.255055127090436 | 6.185067107727323 | 0.6293261417386926 | 0.6573991943998403'
 
@@ -129,8 +135,9 @@ The number of training samples is 56
 The number of testing samples is 14
 --------------------------------------------------
 The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
 'MSE | RMSE | R2 | Explained Variance
-38.651616031855795 | 6.217042386203893 | 0.6254836492859532 | 0.6513161101797078'
+63.43887381788123 | 7.964852404023644 | 0.38530654200589665 | 0.4208665215076135'
 
 Ridge
 
@@ -139,8 +146,9 @@ The number of training samples is 56
 The number of testing samples is 14
 --------------------------------------------------
 The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
 'MSE | RMSE | R2 | Explained Variance
-72.57410132407249 | 8.519043451237497 | 0.29679039650394456 | 0.330527730921539'
+36.78940770559573 | 6.065427248396912 | 0.6435275899596222 | 0.6688447164154807'
 
 Lasso
 
@@ -149,8 +157,9 @@ The number of training samples is 56
 The number of testing samples is 14
 --------------------------------------------------
 The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
 'MSE | RMSE | R2 | Explained Variance
-35.804494695643 | 5.983685711636516 | 0.6530709432298779 | 0.6773230844986046'
+46.616227566862484 | 6.827607748462303 | 0.5483102331864225 | 0.57861102268219'
 
 XGBoost
 
@@ -159,8 +168,9 @@ The number of training samples is 56
 The number of testing samples is 14
 --------------------------------------------------
 The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
 'MSE | RMSE | R2 | Explained Variance
-35.14678216897658 | 5.9284721614406335 | 0.6594438745738872 | 0.6814453354075021'
+35.13571815823759 | 5.9275389630299005 | 0.6595510797402329 | 0.6821283647685428'
 
 Multi-Layer Perceptron
 
@@ -169,5 +179,6 @@ The number of training samples is 56
 The number of testing samples is 14
 --------------------------------------------------
 The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
 'MSE | RMSE | R2 | Explained Variance
-83.84290824531898 | 9.156577321538817 | 0.1876008495114434 | 0.22395338702762624'
+115.3963420023173 | 10.742268941071867 | -0.11813738542882102 | -0.04245241595990734'

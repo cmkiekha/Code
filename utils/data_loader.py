@@ -133,26 +133,27 @@ class ChurnDataLoader(DataLoader):
 
     def setup(self):
         # ID is arbitrary and unrelated to customer; this will try to predict utility of Cust ID (not doable)
-        X = self.dataframe.drop(columns=['customerID', self.target_column]).to_numpy()  
-        y = self.dataframe[self.target_column].to_numpy()
+        X = self.dataframe.drop(columns=['customerID', self.target_column])#.to_numpy()  
+        y = self.dataframe[self.target_column]#.to_numpy()
 
         # Preprocess the input features that are categorical
         # check to see that these are all the categorical columns
         categorical_features_idxs = [0, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  
-        X[:, categorical_features_idxs] = self.input_preprocessing.fit_transform(X[:, categorical_features_idxs])
+        X.iloc[:, categorical_features_idxs] = self.input_preprocessing.fit_transform(X.iloc[:, categorical_features_idxs])
 
         # Remove rows with missing values
-        to_include = X[:, 18] != ' ' # Total Charges had missing values
+        to_include = X.iloc[:, 18] != ' ' # Total Charges had missing values
         X = X[to_include]
         y = y[to_include]
         
         # Convert the numeric features to float
-        X[:, 4] = X[:, 4].astype(float)
-        X[:, 17] = X[:, 17].astype(float)
-        X[:, 18] = X[:, 18].astype(float)
+        X.iloc[:, 4] = X.iloc[:, 4].astype(float)
+        X.iloc[:, 17] = X.iloc[:, 17].astype(float)
+        X.iloc[:, 18] = X.iloc[:, 18].astype(float)
 
         # Convert the categorical features to int
-        X[:, categorical_features_idxs] = X[:, categorical_features_idxs].astype(int)
+        X.iloc[:, categorical_features_idxs] = X.iloc[:, categorical_features_idxs].astype(int)
+        X = X.rename(columns={'tenure': 'Tenure'})
 
         # Preprocess the output to be binary
         y = self.output_preprocessing.fit_transform(y)

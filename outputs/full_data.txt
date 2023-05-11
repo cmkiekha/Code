@@ -1,0 +1,173 @@
+------------- Churn Dataset -------------
+
+Logistic Regression
+
+--------------------------------------------------
+The number of training samples is 5625
+The number of testing samples is 1407
+--------------------------------------------------
+The number of training samples after rebalancing is 8260
+The number of testing samples after rebalancing is 1407
+--------------------------------------------------
+The churn data loaded successfully.
+              precision    recall  f1-score   support
+
+           0       0.88      0.75      0.81      1033
+           1       0.51      0.73      0.60       374
+
+    accuracy                           0.74      1407
+   macro avg       0.70      0.74      0.70      1407
+weighted avg       0.78      0.74      0.75      1407
+
+
+Random Forest
+
+--------------------------------------------------
+The number of training samples is 5625
+The number of testing samples is 1407
+--------------------------------------------------
+The number of training samples after rebalancing is 8260
+The number of testing samples after rebalancing is 1407
+--------------------------------------------------
+The churn data loaded successfully.
+              precision    recall  f1-score   support
+
+           0       0.87      0.80      0.83      1033
+           1       0.55      0.66      0.60       374
+
+    accuracy                           0.76      1407
+   macro avg       0.71      0.73      0.72      1407
+weighted avg       0.78      0.76      0.77      1407
+
+
+XGBoost
+
+--------------------------------------------------
+The number of training samples is 5625
+The number of testing samples is 1407
+--------------------------------------------------
+The number of training samples after rebalancing is 8260
+The number of testing samples after rebalancing is 1407
+--------------------------------------------------
+The churn data loaded successfully.
+              precision    recall  f1-score   support
+
+           0       0.87      0.79      0.82      1033
+           1       0.53      0.67      0.59       374
+
+    accuracy                           0.75      1407
+   macro avg       0.70      0.73      0.71      1407
+weighted avg       0.78      0.75      0.76      1407
+
+
+kNN Classifier
+
+--------------------------------------------------
+The number of training samples is 5625
+The number of testing samples is 1407
+--------------------------------------------------
+The number of training samples after rebalancing is 8260
+The number of testing samples after rebalancing is 1407
+--------------------------------------------------
+The churn data loaded successfully.
+              precision    recall  f1-score   support
+
+           0       0.87      0.71      0.78      1033
+           1       0.47      0.70      0.56       374
+
+    accuracy                           0.71      1407
+   macro avg       0.67      0.71      0.67      1407
+weighted avg       0.76      0.71      0.72      1407
+
+
+Multi-Layer Perceptron
+
+--------------------------------------------------
+The number of training samples is 5625
+The number of testing samples is 1407
+--------------------------------------------------
+The number of training samples after rebalancing is 8260
+The number of testing samples after rebalancing is 1407
+--------------------------------------------------
+The churn data loaded successfully.
+              precision    recall  f1-score   support
+
+           0       0.91      0.65      0.76      1033
+           1       0.46      0.83      0.59       374
+
+    accuracy                           0.70      1407
+   macro avg       0.69      0.74      0.67      1407
+weighted avg       0.79      0.70      0.71      1407
+
+---------- Engineering Dataset ----------
+
+Linear Regression
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+'MSE | RMSE | R2 | Explained Variance
+38.255055127090436 | 6.185067107727323 | 0.6293261417386926 | 0.6573991943998403'
+
+Random Forest
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+Warning: No parameter grid found. Using default parameters.
+'MSE | RMSE | R2 | Explained Variance
+21.427314285714285 | 4.62896470992319 | 0.7923791971524619 | 0.8020964405774174'
+
+Elastic Net
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+'MSE | RMSE | R2 | Explained Variance
+38.81864162090129 | 6.230460787205172 | 0.6238652482847216 | 0.6502172768904477'
+
+Ridge
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+'MSE | RMSE | R2 | Explained Variance
+72.57410132407249 | 8.519043451237497 | 0.29679039650394456 | 0.330527730921539'
+
+Lasso
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+'MSE | RMSE | R2 | Explained Variance
+5.830521495900759 | 5.9837458969284105 | 0.6530639642097346 | 0.6769938635997708'
+
+XGBoost
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+'MSE | RMSE | R2 | Explained Variance
+35.14678216897658 | 5.9284721614406335 | 0.6594438745738872 | 0.6814453354075021'
+
+Multi-Layer Perceptron
+
+--------------------------------------------------
+The number of training samples is 56
+The number of testing samples is 14
+--------------------------------------------------
+The engineering data loaded successfully.
+'MSE | RMSE | R2 | Explained Variance
+115.28620187317988 | 10.73714123373535 | -0.11707017832426647 | -0.11677873862905153'

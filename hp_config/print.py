@@ -48,6 +48,7 @@ config = {
     "mlp": {
         "param_grid": {
             "hidden_layer_sizes": (100,),
+            "max_iter": 1000,
             "activation": "relu",
             "solver": "adam",
             "alpha": 0.001,
