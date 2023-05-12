@@ -19,7 +19,6 @@ class StatisticalAnalyzer:
             f1_score = 2 * (precision * recall) / (precision + recall)
             accuracy = (tp + tn) / (tp + tn + fp + fn)
 
-            report = { "Precision": precision, "Recall": recall, "F1_Score": f1_score, "Accuracy": accuracy }
             return f"'Precision | Recall | F1 Score | Accuracy\n{precision} | {recall} | {f1_score} | {accuracy}'"
         else:
             return classification_report(self.y_true, self.y_pred)
@@ -30,5 +29,4 @@ class StatisticalAnalyzer:
         r2 = r2_score(self.y_true, self.y_pred)
         evs = explained_variance_score(self.y_true, self.y_pred)
 
-        report = { "MSE": mse, "RMSE": rmse, "R2": r2, "Explained_Variance": evs }
         return f"'MSE | RMSE | R2 | Explained Variance\n{mse} | {rmse} | {r2} | {evs}'"

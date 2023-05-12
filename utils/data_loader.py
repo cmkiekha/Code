@@ -1,9 +1,10 @@
-# example of class instance implementation     
 import pandas as pd
 import numpy as np
+
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OrdinalEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
+
 import imblearn
 
 
@@ -13,7 +14,8 @@ def fix_imbalanced_data(strat, X_train, y_train):
     undersampling, or SMOTE.
     """
     X_rebal, y_rebal = None, None
-    # will rebalance so that minority and majority classes are equal
+
+    # Rebalance so that minority and majority classes are equal
     if strat == 'over':
         oversampler = imblearn.over_sampling.RandomOverSampler(random_state=42) 
         X_rebal, y_rebal = oversampler.fit_resample(X_train, y_train)
@@ -28,20 +30,9 @@ def fix_imbalanced_data(strat, X_train, y_train):
 
 class DataLoader(object):
         """
-            Class for data loading
-            Parameters:
-            - data_path: path to the csv file containing the data
-            - target_column: response variable
-            - test_size: percentage of size of test set
-            - imb_strat: this indicates the strategy for oversampling, undersampling, or SMOTE
-            - random_state: seed for reproducibility
+        Class for data loading
         """
-        def __init__(self, 
-                     data_path, 
-                     target_column, 
-                     test_size=0.2, 
-                     imb_strat=None,
-                     random_state=42):
+        def __init__(self, data_path, target_column, test_size=0.2, imb_strat=None, random_state=42):
             self.data_path = data_path
             self.target_column = target_column
             self.test_size = test_size
@@ -75,11 +66,6 @@ class DataLoader(object):
 class EngineeringDataLoader(DataLoader):
     """
     Class for data loading
-    Parameters:
-     - data_path: path to the csv file containing the data
-     - target_column
-     _ test_size
-     - random_state
     """
     def __init__(self, data_path, target_column, test_size=0.2, imb_strat=None, random_state=42):
         super().__init__(data_path, target_column, test_size, imb_strat, random_state)
@@ -133,8 +119,8 @@ class ChurnDataLoader(DataLoader):
 
     def setup(self):
         # ID is arbitrary and unrelated to customer; this will try to predict utility of Cust ID (not doable)
-        X = self.dataframe.drop(columns=['customerID', self.target_column])#.to_numpy()  
-        y = self.dataframe[self.target_column]#.to_numpy()
+        X = self.dataframe.drop(columns=['customerID', self.target_column])
+        y = self.dataframe[self.target_column]
 
         # Preprocess the input features that are categorical
         # check to see that these are all the categorical columns
